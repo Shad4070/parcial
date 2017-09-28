@@ -2,15 +2,38 @@
 <html>
 <head>
 	<title>Parcial</title>
-	<script type="text/javascript">
-		
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+
+	</style>
+	<script type="text/javascript">	
+		function buscar(){
+			var texto=document.getElementById('tex').value;
+			var query= document.querySelectorAll(texto);
+			for(var i=0;i<query.length;i++){
+				query[i].style.backgroundColor="yellow";
+			}
+		}
+
+		function reset(){		
+			var all=document.querySelectorAll("body, div, p");
+			for(var i=0;i<all.length;i++){
+				all[i].style.backgroundColor="white";	
+			}
+			
+		}
 	</script>
 </head>
-<body>
+<body id="all">
 <div id="d1" class="a">d1<p id="p1" class="b"/>p1</div>
 <div id="d2" class="b">d2<p id="p2" class="c"/>p2</div>
 <div id="d3" class="a">d3<p id="p3" class="b"/>p3</div>
 <div id="d4" class="c">d4<p id="p4" class="a"/>p4</div>
 <div id="d5" class="c">d3<p id="p5" class="d1"/>p3</div>
+<textarea name="texto" placeholder="Actividad" id="tex"></textarea>
+<button onclick="buscar()">Señalar</button>
+<button onclick="reset()">Reset</button>
 </body>
 </html>
