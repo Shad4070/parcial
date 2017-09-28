@@ -15,6 +15,9 @@
 			for(var i=0;i<query.length;i++){
 				query[i].style.backgroundColor="yellow";
 			}
+			if (query.length==0) {
+				window.alert("No hay resultados");
+			}
 		}
 
 		function reset(){		
@@ -31,7 +34,7 @@
 <div id="d2" class="b">d2<p id="p2" class="c"/>p2</div>
 <div id="d3" class="a">d3<p id="p3" class="b"/>p3</div>
 <div id="d4" class="c">d4<p id="p4" class="a"/>p4</div>
-<div id="d5" class="c">d3<p id="p5" class="d1"/>p3</div>
+<div id="d5" class="c">d5<p id="p5" class="d1"/>p5</div>
 <textarea name="texto" placeholder="Actividad" id="tex"></textarea>
 <button onclick="buscar()">Señalar</button>
 <button onclick="reset()">Reset</button>
